@@ -8,7 +8,7 @@ use App\Models\ServiceType;
 use App\Models\Translation;
 class ServiceEdit extends Component
 {
-    public $services,$files,$imageicon,$inputs=[],$service_types,$prices = [],$servicetypes =[],$inputi=1,$service_name,$is_active=1,$service,$lang;
+    public $services,$files,$imageicon,$inputs=[],$service_types,$prices = [],$servicetypes =[],$inputi=1,$service_name,$is_active=1,$is_important=0,$service,$lang;
     /* render the page */
     public function render()
     {
@@ -86,6 +86,7 @@ class ServiceEdit extends Component
         $this->service->service_name = $this->service_name;
         $this->service->icon = $this->imageicon['path'];
         $this->service->is_active = $this->is_active ?? 0;
+        $this->service->is_important= $this->is_important ?? 0;
         $this->service->save();
         $details = ServiceDetail::where('service_id',$this->service->id)->delete();
         foreach($this->inputs as $key => $value)

@@ -90,7 +90,7 @@
                             <li class="nav-item {{ Request::is('admin/service') ? 'active' : '' }}">
                                 <a class="nav-link " href="{{route('admin.service_list')}}">
                                     <span class="sidenav-mini-icon side-bar-inner"> S </span>
-                                    <span class="sidenav-normal side-bar-inner">{{$lang->data['service_list'] ?? 'Service List'}}</span>
+                                    <span class="sidenav-normal side-bar-inner">{{$lang->data['service_list'] ?? 'Item List'}}</span>
                                 </a>
                             </li>
                             <li class="nav-item {{ Request::is('admin/service/type') ? 'active' : '' }}">

@@ -35,6 +35,7 @@ return [
                     "price" => "Price",
                     "is_active" => "Is Active",
                     "active"    => "Active",
+                    'is_important' => 'Is Important',
                     "inactive"  => "InActive",
                     "yes"   => "Yes",
                     "no"    => "No",

@@ -196,10 +196,10 @@ function getApplicationName() {
     $site = $settings->siteData();
     if(isset($site['default_application_name']))
     {
-        $favicon = (($site['default_application_name']) && ($site['default_application_name'] !=""))? $site['default_application_name'] : 'Laundry Box';
+        $favicon = (($site['default_application_name']) && ($site['default_application_name'] !=""))? $site['default_application_name'] : 'Save On Dry Cleaners';
         return $favicon;
     }
-    return 'Laundry Box';
+    return 'Save on Dry Cleaners';
 }
 
 

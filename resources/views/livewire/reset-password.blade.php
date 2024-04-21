@@ -9,7 +9,7 @@
                             <div class="card-header bg-transparent text-center">
                                 <div class="d-flex align-items-center justify-content-center mt-2 mb-2">
                                     <img src="{{asset('assets/img/logo-ct.png')}}" class="login-logo">
-                                    <h4 class="text-dark ms-3 mb-0 text-uppercase">Laundry Box</h4>
+                                    <h4 class="text-dark ms-3 mb-0 text-uppercase">Save On Dry Cleaners</h4>
                                 </div>
                             </div>
                             <div class="card-body px-lg-5 pt-0" >

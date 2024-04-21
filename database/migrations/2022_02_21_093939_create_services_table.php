@@ -17,10 +17,13 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('service_name');
             $table->string('icon')->nullable();
+            $table->integer('is_important');
             $table->integer('is_active');
             $table->timestamps();
         });
     }
+
+    
 
     /**
      * Reverse the migrations.

@@ -38,7 +38,7 @@ class OrderInvoicePrint extends Component
         /* if site has default appplication name */
         if(isset($site['default_application_name']))
         {
-            $sitename = (($site['default_application_name']) && ($site['default_application_name'] !=""))? $site['default_application_name'] : 'Laundry Box';
+            $sitename = (($site['default_application_name']) && ($site['default_application_name'] !=""))? $site['default_application_name'] : 'Save On Dry Cleaners';
             $this->sitename = $sitename;
         }
         /* if site has default phone number */

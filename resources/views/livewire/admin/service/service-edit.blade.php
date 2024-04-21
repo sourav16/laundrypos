@@ -116,6 +116,15 @@
                                 <label class="form-check-label"
                                     for="employee">{{ $lang->data['is_active'] ?? 'Is Active' }} ?</label>
                             </div>
+
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="itemimp" checked
+                                    wire:model="is_important">
+                                <label class="form-check-label"
+                                    for="itemimp">{{ $lang->data['is_important'] ?? 'Is Important' }} ?</label>
+                            </div>
+
+
                             <div>
                                 <a href="{{ route('admin.service_list') }}"> <button type="button"
                                         class="btn btn-secondary">{{ $lang->data['cancel'] ?? 'Cancel' }}</button></a>

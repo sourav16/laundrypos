@@ -351,8 +351,9 @@ class AddOrders extends Component
             }
             $this->dispatchBrowserEvent(
                 'alert', ['type' => 'success',  'message' => $order->order_number.' Was Successfully Created!']);
+
         }
-         $this->emit('printPage',$order->id);
+         $this->emit('reloadpage');
     }
 
     public function magicFill()

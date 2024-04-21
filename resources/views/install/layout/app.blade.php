@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Laundry Box - Installer</title>
+    <title>Save on Dry cleaners</title>
     <link href="{{asset('assets/css/nucleo-icons.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <link src="{{asset('assets/vendors/font-awesome/css/font-awesome.css')}}" crossorigin="anonymous">

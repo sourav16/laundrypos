@@ -28,10 +28,10 @@
                                 <div class="border-dashed border-1 border-secondary border-radius-md py-1">
                                     <a type="button" data-bs-toggle="modal" data-bs-target="#servicetype"
                                         wire:click="selectService({{ $item->id }})">
-                                        <div class="avatar avatar-xl mb-3">
+                                        {{-- <div class="avatar avatar-xl mb-3">
                                             <img src="{{ asset('assets/img/service-icons/' . $item->icon) }}"
                                                 class="rounded p-2">
-                                        </div>
+                                        </div> --}}
                                         <p class="text-xs font-weight-bold">{{ $item->service_name }}</p>
                                     </a>
                                 </div>
@@ -357,8 +357,7 @@
                                             </option>
                                             <option class="select-box" value="1">
                                                 {{ $lang->data['cash'] ?? 'Cash' }}</option>
-                                            <option class="select-box" value="2">{{ $lang->data['upi'] ?? 'UPI' }}
-                                            </option>
+                                            
                                             <option class="select-box" value="3">
                                                 {{ $lang->data['card'] ?? 'Card' }}</option>
                                             <option class="select-box" value="4">
@@ -418,13 +417,13 @@
     <livewire:components.check-financial-year-component/>
     <script>
          "use strict";
-        Livewire.on('printPage', orderId => {
-            var $id = orderId;
-            window.open(
-                '{{ url('admin/orders/print-order/') }}' + '/' + $id,
-                '_blank'
-            );
-            window.onfocus = function () { setTimeout(function () { window.location.reload(); }, 100); }
-        })
+        // Livewire.on('printPage', orderId => {
+        //     var $id = orderId;
+        //     window.open(
+        //         '{{ url('admin/orders/print-order/') }}' + '/' + $id,
+        //         '_blank'
+        //     );
+        //     window.onfocus = function () { setTimeout(function () { window.location.reload(); }, 100); }
+        // })
     </script>
 </div>

@@ -567,6 +567,7 @@
             'logout' => 'Logout',
             'price' => 'Price',
             'is_active' => 'Is Active',
+            'is_important' => 'Is Important',
             'active' => 'Active',
             'inactive' => 'InActive',
             'yes' => 'Yes',

@@ -12,7 +12,7 @@ use App\Models\Translation;
 
 class ServiceCreate extends Component
 {
-    public $services, $files, $imageicon, $inputs = [], $service_types, $prices = [], $servicetypes = [], $inputi = 1, $service_name, $is_active = 1, $lang;
+    public $services, $files, $imageicon, $inputs = [], $service_types, $prices = [], $servicetypes = [], $inputi = 1, $service_name, $is_active = 1,$is_important = 0, $lang;
     /* render the page */
     public function render()
     {
@@ -58,9 +58,15 @@ class ServiceCreate extends Component
             'service_name'  => 'required',
         ]);
         /* if image icon is not selected send error alert*/
-        if (!$this->imageicon) {
-            $this->addError('icon', "Please select an icon");
-            return 1;
+        // if (!$this->imageicon) {
+        //     $this->addError('icon', "Please select an icon");
+        //     return 1;
+        // }
+
+        if(!$this->imageicon) {
+            $icn = '';
+        }else {
+            $icn = $this->imageicon['path'];
         }
         /* if service is not selected */
         if (count($this->inputs) <= 0) {
@@ -69,8 +75,9 @@ class ServiceCreate extends Component
         }
         $service = Service::create([
             'service_name'  => $this->service_name,
-            'icon'  => $this->imageicon['path'],
-            'is_active' => $this->is_active
+            'icon'  => $icn,
+            'is_active' => $this->is_active,
+            'is_important' => $this->is_important
         ]);
         foreach ($this->inputs as $key => $value) {
             $servicetype = ServiceType::where('id', $this->servicetypes[$value])->first();
